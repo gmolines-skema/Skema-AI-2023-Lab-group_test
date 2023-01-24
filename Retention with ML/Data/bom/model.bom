@@ -11,6 +11,10 @@ public class CustomerRecord
                 property "ads.attributeId" "7"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "carOwner"
                 property update "true";
+    public decisions.mlsamples.telco_retention.data.EmploymentValues employmentStatus
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "employmentStatus"
+                property update "true";
     public double estimatedIncome
                 property "ads.attributeId" "6"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "estimatedIncome"
@@ -39,13 +43,31 @@ public class CustomerRecord
                 property "ads.attributeId" "8"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "age"
                 property update "true";
-    public CustomerRecord(boolean carOwner, double estimatedIncome, string gender, decisions.mlsamples.telco_retention.data.Location location, string maritalStatus, string name, java.lang.Long newAttribute, double newAttribute2)
+    public CustomerRecord(boolean carOwner, decisions.mlsamples.telco_retention.data.EmploymentValues employmentStatus, double estimatedIncome, string gender, decisions.mlsamples.telco_retention.data.Location location, string maritalStatus, string name, java.lang.Long newAttribute, double newAttribute2)
                 property autoExpand "true"
                 property beanConstructor "true"
                 property groups "BALA"
                 property prototype "true";
     public CustomerRecord()
                 property "dataio.default" "true";
+}
+
+public class EmploymentValues
+        extends java.lang.Enum
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "employmentValues"
+        property "de.generated" "true"
+{
+    domain {static employed, static retired, static unemployed}
+    public static final readonly decisions.mlsamples.telco_retention.data.EmploymentValues employed
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "employed";
+    public static final readonly decisions.mlsamples.telco_retention.data.EmploymentValues retired
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "retired";
+    public static final readonly decisions.mlsamples.telco_retention.data.EmploymentValues unemployed
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "unemployed";
 }
 
 public class Location

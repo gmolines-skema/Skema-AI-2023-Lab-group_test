@@ -1,7 +1,7 @@
 
 # decisions.mlsamples.telco_retention.data.CustomerRecord
 decisions.mlsamples.telco_retention.data.CustomerRecord#concept.label = customer record
-decisions.mlsamples.telco_retention.data.CustomerRecord.CustomerRecord(boolean,double,java.lang.String,decisions.mlsamples.telco_retention.data.Location,java.lang.String,java.lang.String,java.lang.Long,double)#phrase.navigation = a new {customer record} where {0, car owner} {1, estimated income} {2, gender} {3, location} {4, marital status} {5, name} {6, children} {7, age}
+decisions.mlsamples.telco_retention.data.CustomerRecord.CustomerRecord(boolean,decisions.mlsamples.telco_retention.data.EmploymentValues,double,java.lang.String,decisions.mlsamples.telco_retention.data.Location,java.lang.String,java.lang.String,java.lang.Long,double)#phrase.navigation = a new {customer record} where {0, car owner} {1, employmentStatus} {2, estimated income} {3, gender} {4, location} {5, marital status} {6, name} {7, children} {8, age}
 decisions.mlsamples.telco_retention.data.CustomerRecord.carOwner#phrase.action[0] = {this} gets car owner only if {car owner}
 decisions.mlsamples.telco_retention.data.CustomerRecord.carOwner#phrase.action[1] = make it {car owner} that {this} is car owner
 decisions.mlsamples.telco_retention.data.CustomerRecord.carOwner#phrase.action[1].deprecated = true
@@ -9,6 +9,9 @@ decisions.mlsamples.telco_retention.data.CustomerRecord.carOwner#phrase.navigati
 decisions.mlsamples.telco_retention.data.CustomerRecord.carOwner#phrase.negative_predicate = {this} is not car owner
 decisions.mlsamples.telco_retention.data.CustomerRecord.carOwner#phrase.negative_predicate_setter = {this} does not get car owner
 decisions.mlsamples.telco_retention.data.CustomerRecord.carOwner#phrase.positive_predicate_setter = {this} gets car owner
+decisions.mlsamples.telco_retention.data.CustomerRecord.employmentStatus#phrase.action = set the employmentStatus of {this} to {employmentStatus}
+decisions.mlsamples.telco_retention.data.CustomerRecord.employmentStatus#phrase.clearer = clear the employmentStatus of {this}
+decisions.mlsamples.telco_retention.data.CustomerRecord.employmentStatus#phrase.navigation = {employmentStatus} of {this}
 decisions.mlsamples.telco_retention.data.CustomerRecord.estimatedIncome#phrase.action = set the estimated income of {this} to {estimated income}
 decisions.mlsamples.telco_retention.data.CustomerRecord.estimatedIncome#phrase.addition_setter = add {estimated income} to the estimated income of {this}
 decisions.mlsamples.telco_retention.data.CustomerRecord.estimatedIncome#phrase.navigation = {estimated income} of {this}
@@ -30,6 +33,12 @@ decisions.mlsamples.telco_retention.data.CustomerRecord.newAttribute2#phrase.act
 decisions.mlsamples.telco_retention.data.CustomerRecord.newAttribute2#phrase.addition_setter = add {age} to the age of {this}
 decisions.mlsamples.telco_retention.data.CustomerRecord.newAttribute2#phrase.navigation = {age} of {this}
 decisions.mlsamples.telco_retention.data.CustomerRecord.newAttribute2#phrase.subtraction_setter = subtract {age} from the age of {this}
+
+# decisions.mlsamples.telco_retention.data.EmploymentValues
+decisions.mlsamples.telco_retention.data.EmploymentValues#concept.label = employmentValues
+decisions.mlsamples.telco_retention.data.EmploymentValues.employed#instance.label = employed
+decisions.mlsamples.telco_retention.data.EmploymentValues.retired#instance.label = retired
+decisions.mlsamples.telco_retention.data.EmploymentValues.unemployed#instance.label = unemployed
 
 # decisions.mlsamples.telco_retention.data.Location
 decisions.mlsamples.telco_retention.data.Location#concept.label = location
