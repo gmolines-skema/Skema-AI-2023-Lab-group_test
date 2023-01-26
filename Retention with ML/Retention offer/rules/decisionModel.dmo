@@ -23,6 +23,7 @@
                 <input bomType="decisions.mlsamples.telco_retention.data.Subscription" collection="false" name="Subscription"/>
                 <output bomType="java.lang.Double" collection="false" name="Operation cost"/>
                 <rule defaultRule="false" href="node_1/location%20table.dmt" kind="DecisionTable" name="location table"/>
+                <rule defaultRule="false" href="node_1/r1.drl" kind="BusinessRule" name="r1"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Operation cost" typeRef="java.lang.Double"/>

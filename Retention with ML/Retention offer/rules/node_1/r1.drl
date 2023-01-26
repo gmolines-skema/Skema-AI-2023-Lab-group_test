@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>r1</name>
+  <uuid>6488fda1-cc03-4633-bc19-ae8c23d3babf</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the location of Customer is country and Bla blah
+then
+	set decision to 0.4 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
