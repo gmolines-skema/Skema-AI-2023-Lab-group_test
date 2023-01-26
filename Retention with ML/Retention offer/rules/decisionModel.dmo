@@ -23,7 +23,6 @@
                 <input bomType="decisions.mlsamples.telco_retention.data.Subscription" collection="false" name="Subscription"/>
                 <output bomType="java.lang.Double" collection="false" name="Operation cost"/>
                 <rule defaultRule="false" href="node_1/location%20table.dmt" kind="DecisionTable" name="location table"/>
-                <rule defaultRule="false" href="node_1/RRRR.drl" kind="BusinessRule" name="RRRR"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Operation cost" typeRef="java.lang.Double"/>
@@ -42,17 +41,17 @@
         </extensionElements>
         <variable id="node_2_ii" name="Subscription" typeRef="decisions.mlsamples.telco_retention.data.Subscription"/>
     </inputData>
-    <decision id="node_3" name="Logical upgradeZZ">
+    <decision id="node_3" name="Logical upgrade">
         <description>If we had to propose an upgrade, what would be the most logical upgrade.</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="decisions.mlsamples.telco_retention.data.Subscription" collection="false" name="Subscription"/>
-                <output bomType="java.lang.String" collection="false" name="Logical upgradeZZ"/>
+                <output bomType="java.lang.String" collection="false" name="Logical upgrade"/>
                 <rule defaultRule="true" href="node_3/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
                 <rule defaultRule="false" href="node_3/upgrade%20table.dmt" kind="DecisionTable" name="upgrade table"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_3_ii" name="Logical upgradeZZ" typeRef="java.lang.String"/>
+        <variable id="node_3_ii" name="Logical upgrade" typeRef="java.lang.String"/>
         <informationRequirement>
             <requiredInput href="#node_2"/>
         </informationRequirement>
@@ -63,7 +62,7 @@
                 <input bomType="decisions.mlsamples.telco_retention.data.CustomerRecord" collection="false" name="Customer"/>
                 <input bomType="java.lang.Double" collection="false" name="Operation cost"/>
                 <input bomType="decisions.mlsamples.telco_retention.data.Subscription" collection="false" name="Subscription"/>
-                <input bomType="java.lang.String" collection="false" name="Logical upgradeZZ"/>
+                <input bomType="java.lang.String" collection="false" name="Logical upgrade"/>
                 <output bomType="decisions.mlsamples.telco_retention.data.Offer" collection="true" name="Ranked retention offers"/>
                 <rule defaultRule="false" href="node_4/Send%20survey.drl" kind="BusinessRule" name="Send survey"/>
                 <rule defaultRule="false" href="node_4/Discount%20for%20low%20cost%20operations.drl" kind="BusinessRule" name="Discount for low cost operations"/>

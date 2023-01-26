@@ -4,7 +4,7 @@
   <uuid>a9c5d0ae-185d-4ec1-bd6a-0a45c735feb4</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    'Logical upgradeZZ' is undefined 
+    'Logical upgrade' is undefined 
 then
     add a new offer where
         the estimated cost is  0.2 * the usage, 
